@@ -22,7 +22,8 @@ opts = {"alias": ("гдз", "решебник", "ответы"),
              "conv": ("валюта", "конвертер","доллар",'руб','евро'),
              "internet": ("открой", "вк", "гугл", "сайт", 'вконтакте', "ютуб"),
              "translator": ("переводчик","translate", "переведи"),
-             "deals": ("дела","делишки", 'сам')}}
+             "deals": ("дела","делишки", 'сам'),
+             "stopWork":("пока", "связи", 'свидания')}}
 startTime = 0
 speak_engine = pyttsx3.init()
 voices = speak_engine.getProperty('voices')
@@ -111,5 +112,9 @@ def execute_cmd(cmd):
             speak("Секундомер не включен")
     elif cmd == 'deals':
         speak("Голова пока цела. Я имею ввиду процессор.")
+    elif cmd == 'stopWork':
+        speak("Приятно было пообщаться! До свидания.")
+        exit()
     else:
         print("Команда не распознана")
+
